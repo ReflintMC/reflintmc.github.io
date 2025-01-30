@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReflintMC - Высокопроизводительное ядро Minecraft</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background-color: #1a1a1a;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #FF6B00;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FF6B00;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FF6B00;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1607988795691-3d0147b43231?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            padding: 0 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #FF6B00;
+        }
+
+        .download-btn {
+            background-color: #FF6B00;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .download-btn:hover {
+            background-color: #E65A00;
+        }
+
+        .features {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #FF6B00;
+            margin-bottom: 1rem;
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 5rem 2rem;
+            background-color: #1a1a1a;
+        }
+
+        .version-badge {
+            background-color: #FF6B00;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            padding: 2rem;
+            text-align: center;
+            border-top: 2px solid #FF6B00;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #FF6B00;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">FlintMC</div>
+            <div class="nav-links">
+                <a href="#features">Преимущества</a>
+                <a href="#download">Скачать</a>
+                <a href="https://github.com/ReflintMC/Reflint/releases">Документация</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Новое поколение Minecraft-серверов</h1>
+            <p>Высокая производительность, современные функции и гибкая настройка</p>
+            <a href="#download" class="download-btn">Скачать Reflint</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Наши преимущества</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Ультра производительность</h3>
+                <p>Оптимизированное ядро с быстрой обработкой территории мира</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-gamepad"></i>
+                <h3>Играйте с комфортом</h3>
+                <p>Сервер не крашнется и не сломается без причины в случайный момент</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-paper-plane"></i>
+                <h3>Основан на Paper</h3>
+                <p>Быстрое и стабильное ядро, на котором основан наш проект</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="download-section" id="download">
+        <div class="version-badge">Minecraft 1.21.4</div>
+        <h2>Скачать Reflint</h2>
+        <div style="margin-top: 2rem;">
+            <a href="https://github.com/ReflintMC/Reflint/releases" class="download-btn">Скачать ядро</a>
+            <a href="https://github.com/ReflintMC/Reflint" class="download-btn" style="margin-left: 1rem;">Документация</a>
+        </div>
+    </section>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <footer>
+        <p>© 2025 FlintMC.</p>
+        <div class="social-links">
+            <a href="https://github.com/ReflintMC/Reflint"><i class="fab fa-github"></i></a>
+            <a href="https://discord.gg/2TRCbjzdmh"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
